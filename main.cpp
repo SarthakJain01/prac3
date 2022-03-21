@@ -1,6 +1,5 @@
 #include <string>
 #include <iostream>
-#include <sstream>
 #include "Player.h"
 #include "Computer.h"
 #include "Human.h"
@@ -17,6 +16,6 @@ using namespace std;
 
 int main(){
   Tournament Champ;
-  Champ.competition();
+  Champ.run();
   return 0;
 }

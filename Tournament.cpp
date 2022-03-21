@@ -35,7 +35,7 @@ Computer * Tournament::opponent(string whatever) {
     return player;
   }
 }
-void Tournament::competition() {
+void Tournament::run() {
   string competitors;
   getline(cin, competitors);
   string gamers[8];
@@ -60,4 +60,4 @@ void Tournament::competition() {
 
     Computer * WINNER = engiene.game(Finalist1, Finalist2);
     cout << WINNER->get_name() << endl;
-}
+};

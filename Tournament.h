@@ -15,6 +15,6 @@ class Tournament{
         Computer * opponent(string whatever);
 
     public:
-        void competition();
+        void run();
 };
 #endif 
