@@ -1,18 +1,43 @@
-#include "Referee.h"
+#include <string>
 #include <iostream>
+#include "Player.h"
+#include "Computer.h"
+#include "Human.h"
+#include "Referee.h"
+#include "Avalanche.h"
+#include "Bureaucrat.h"
+#include "Crescendo.h"
+#include "Fistfull0Dollars.h"
+#include "PaperDoll.h"
+#include "RandomComputer.h"
+#include "Toolbox.h"
+using namespace std;
 
-Referee::Referee(){}
-char Referee::refGame(Human player1,Computer player2 ){
-    char Human_turn = player1.makeMove();
+Computer * Referee::game(Computer * one, Computer * two) {
+    int oneWin = 0;
+    int twoWin = 0;
+    for (int i = 0; i<5; i++) {
+      one -> play();
+      two -> play();
+      string o = one->get();
+      string t = two->get();
+      if (((o == "R")&&(t =="S"))||((o == "S")&&(t =="P"))||((o == "P")&&(t =="R"))) {
+        oneWin++;
+      } else if (o == t) {
+        oneWin = oneWin;
+        twoWin = twoWin;
+      } else {
+        twoWin++;
+      }
+    }
 
-    if(Human_turn == 'R'){
-        return 'T';
-    }    
-    if(Human_turn == 'P'){
-        return 'W';
-    }    
-    if(Human_turn == 'S'){
-        return 'L';
-    }        
-return 0;
+    one -> refresh();
+    two -> refresh();
+    if (oneWin == twoWin) {
+      return one;
+    } else if (oneWin > twoWin) {
+      return one;
+    } else {
+      return two;
+    }
 }
