@@ -1,3 +1,5 @@
+#ifndef HUMAN_H
+#define HUMAN_H
 #include <string>
 #include <iostream>
 #include "Player.h"
@@ -8,3 +10,5 @@ Human::Human() {}
 
 void Human::play() {
   getline(cin, input);
+};
+#endif
