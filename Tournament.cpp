@@ -7,7 +7,7 @@
 #include "Avalanche.h"
 #include "Bureaucrat.h"
 #include "Crescendo.h"
-#include "Fistfull0Dollars.h"
+#include "FistfullODollars.h"
 #include "PaperDoll.h"
 #include "RandomComputer.h"
 #include "Toolbox.h"
