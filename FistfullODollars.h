@@ -12,3 +12,4 @@ class FistfullODollars:public Computer{
         void play();
         string get_name();
 };
+#endif 

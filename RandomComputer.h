@@ -12,3 +12,4 @@ class RandomComputer:public Computer{
         void play();
         string get_name();
 };
+#endif 

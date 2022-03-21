@@ -1,15 +1,11 @@
 
-#ifndef Human_h
-#define Human_h
-
 #include <string>
 #include <iostream>
 #include "Player.h"
+#include "Human.h"
 using namespace std;
-class Human:public Player{
-    public:
-        Human();
-        void play();
-};
 
-#endif 
+Human::Human() {}
+
+void Human::play() {
+  getline(cin, input);

@@ -12,3 +12,4 @@ class Bureaucrat:public Computer{
         void play();
         string get_name();
 };
+#endif 
